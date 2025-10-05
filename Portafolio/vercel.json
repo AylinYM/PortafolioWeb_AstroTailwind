@@ -1,4 +1,4 @@
 {
-  "buildCommand": "npm ci && npm run build",
-  "outputDirectory": "dist"
+  "buildCommand": "cd src/portafolio && npm run build",
+  "outputDirectory": "src/portafolio/dist"
 }
