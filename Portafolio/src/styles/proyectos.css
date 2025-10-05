@@ -1,0 +1,289 @@
+/* ============================
+   Animaciones del hero
+============================ */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+.animation-delay-100 { animation-delay: 0.1s; opacity: 0; animation-fill-mode: forwards; }
+.animation-delay-200 { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; }
+.animation-delay-400 { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; }
+.animation-delay-600 { animation-delay: 0.6s; }
+
+/* ============================
+   Formas geométricas animadas
+============================ */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.3), transparent);
+  animation: floatShape 20s infinite ease-in-out;
+}
+
+.shape-1 { width: 300px; height: 300px; top: 10%; left: 10%; animation-delay: 0s; }
+.shape-2 { width: 200px; height: 200px; top: 60%; left: 70%; animation-delay: 2s; }
+.shape-3 { width: 150px; height: 150px; top: 30%; left: 80%; animation-delay: 4s; }
+.shape-4 { width: 250px; height: 250px; top: 70%; left: 20%; animation-delay: 6s; }
+.shape-5 { width: 180px; height: 180px; top: 40%; left: 50%; animation-delay: 8s; }
+
+@keyframes floatShape {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+  25% { transform: translate(30px, -30px) scale(1.1); opacity: 0.5; }
+  50% { transform: translate(-20px, 40px) scale(0.9); opacity: 0.4; }
+  75% { transform: translate(40px, 20px) scale(1.05); opacity: 0.6; }
+}
+
+/* ============================
+   Estadísticas animadas
+============================ */
+.stat-card {
+  text-align: center;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+/* ============================
+   Project Cards
+============================ */
+.project-card {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(220, 38, 38, 0.2);
+}
+
+/* Imagen del proyecto */
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Overlay con botones */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.95), rgba(185, 28, 28, 0.95));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.overlay-btn {
+  background: white;
+  color: #dc2626;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  transform: scale(0);
+}
+
+.project-card:hover .overlay-btn {
+  transform: scale(1);
+}
+
+.demo-btn { transition-delay: 0.1s; }
+.code-btn { transition-delay: 0.2s; }
+
+.overlay-btn:hover {
+  transform: scale(1.2) rotate(360deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Badge del proyecto */
+.project-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Contenido del proyecto */
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.project-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #dc2626;
+  transition: width 0.4s ease;
+}
+
+.project-card:hover .project-title::after {
+  width: 100%;
+}
+
+.project-description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Tecnologías */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-badge {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: #dc2626;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Botones de acción */
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-project {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-demo {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-demo:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+}
+
+.btn-code {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.btn-code:hover {
+  background: #e5e7eb;
+  color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Scroll reveal */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 768px) {
+  .stat-number { font-size: 2rem; }
+  .project-image-container { height: 200px; }
+}

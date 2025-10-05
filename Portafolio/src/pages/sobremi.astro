@@ -1,0 +1,284 @@
+---
+// src/pages/sobremi.astro
+import Base from "../layouts/Base.astro";
+import "../styles/sobremi.css";
+---
+
+<Base
+  title="Sobre mí - Aylin Yap"
+  description="Conoce más sobre mi formación, pasiones y experiencia en desarrollo web"
+>
+  <!-- Hero Section con gradiente animado -->
+  <section class="relative pt-32 pb-24 overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-red-600 via-red-700 to-red-900 animate-gradient-xy"
+    >
+    </div>
+
+    <!-- Formas decorativas -->
+    <div
+      class="absolute top-10 left-10 w-72 h-72 bg-red-400/20 rounded-full blur-3xl animate-blob"
+    >
+    </div>
+    <div
+      class="absolute top-20 right-10 w-96 h-96 bg-red-500/20 rounded-full blur-3xl animate-blob animation-delay-2000"
+    >
+    </div>
+    <div
+      class="absolute -bottom-10 left-1/2 w-80 h-80 bg-red-300/20 rounded-full blur-3xl animate-blob animation-delay-4000"
+    >
+    </div>
+
+    <div class="relative z-10 container mx-auto px-4 text-center text-white">
+      <div class="animate-fade-in-up">
+        <h2 class="text-5xl md:text-6xl font-bold mb-4">Sobre mí</h2>
+        <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+          Conoce más sobre mi formación y pasiones
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Card de Perfil -->
+  <section class="container mx-auto px-4 -mt-16 relative z-10 pb-16">
+    <div class="max-w-5xl mx-auto">
+      <div
+        class="perfil-card bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100 animate-fade-in-up backdrop-blur-sm"
+      >
+        <!-- Grid de información -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <!-- Universidad -->
+          <div
+            class="info-card bg-gradient-to-br from-red-50 to-rose-50 p-6 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">Universidad</p>
+                <p class="text-gray-600 text-sm mt-1">
+                  Universidad Continental
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ubicación -->
+          <div
+            class="info-card bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">Ubicación</p>
+                <p class="text-gray-600 text-sm mt-1">Huancayo, Perú</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Correo -->
+          <div
+            class="info-card bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">Correo</p>
+                <p class="text-gray-600 text-sm mt-1 break-all">
+                  74890608@continental.edu.pe
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intereses -->
+          <div
+            class="info-card bg-gradient-to-br from-rose-50 to-red-50 p-6 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-rose-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">Intereses</p>
+                <p class="text-gray-600 text-sm mt-1">Web, apps, videojuegos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <span
+            class="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 font-semibold text-sm"
+            >HTML</span
+          >
+          <span
+            class="px-4 py-2 bg-gradient-to-r from-red-500 to-rose-500 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 font-semibold text-sm"
+            >CSS</span
+          >
+          <span
+            class="px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 font-semibold text-sm"
+            >JavaScript</span
+          >
+          <span
+            class="px-4 py-2 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 font-semibold text-sm"
+            >Python</span
+          >
+          <span
+            class="px-4 py-2 bg-gradient-to-r from-rose-500 to-red-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 font-semibold text-sm"
+            >Java</span
+          >
+          <span
+            class="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 font-semibold text-sm"
+            >Git</span
+          >
+          <span
+            class="px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 font-semibold text-sm"
+            >Bootstrap</span
+          >
+        </div>
+
+        <!-- Descripción -->
+        <div
+          class="bg-gradient-to-r from-red-50 via-rose-50 to-pink-50 p-8 rounded-2xl"
+        >
+          <h4
+            class="text-2xl font-bold mb-4 text-center bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"
+          >
+            Mi Historia
+          </h4>
+          <p
+            class="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto"
+          >
+            Soy estudiante de Ingeniería de Sistemas e Informática en la
+            Universidad Continental de Huancayo. Me apasiona la tecnología,
+            especialmente el desarrollo web, las aplicaciones móviles y los
+            videojuegos. Me considero una persona creativa, perseverante y con
+            muchas ganas de aprender constantemente. Busco aplicar mis
+            conocimientos en proyectos innovadores y seguir creciendo como
+            profesional en el mundo tecnológico.
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-8">
+          <a
+            href="/proyectos"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+          >
+            <span>Ver mis proyectos</span>
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // IntersectionObserver para animar info-cards
+    const observerOptions = { threshold: 0.3 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(
+            () => entry.target.classList.add("animate-fade-in-up"),
+            index * 100
+          );
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document
+      .querySelectorAll(".info-card")
+      .forEach((card) => observer.observe(card));
+  </script>
+</Base>
