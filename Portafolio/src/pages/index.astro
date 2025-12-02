@@ -1,9 +1,24 @@
 ---
 import Base from "../layouts/Base.astro";
 import "../styles/index.css"; // 👈 importamos el CSS externo
+import Splash from "../components/Splash.astro";
 ---
 
+
 <Base title="Mi Portafolio - Aylin Yap">
+<Splash />
+<script>
+      // Ocultar splash después de cargar la página
+      window.addEventListener("load", () => {
+        const splash = document.getElementById("splash");
+        if (splash) {
+          setTimeout(() => {
+            splash.style.opacity = "0";
+            setTimeout(() => splash.remove(), 700);
+          }, 1200); // Tiempo visible
+        }
+      });
+    </script>
   <!-- Hero Section -->
   <section class="grid lg:grid-cols-[1fr_2fr] min-h-screen" id="inicio">
     <!-- Imagen Hero -->
