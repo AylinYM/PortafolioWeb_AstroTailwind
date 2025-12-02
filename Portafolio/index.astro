@@ -1,0 +1,121 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/index.css"; // 👈 importamos el CSS externo
+import Splash from "../components/Splash.astro";
+---
+
+
+<Base title="Mi Portafolio - Aylin Yap">
+<Splash />
+<script>
+      // Ocultar splash después de cargar la página
+      window.addEventListener("load", () => {
+        const splash = document.getElementById("splash");
+        if (splash) {
+          setTimeout(() => {
+            splash.style.opacity = "0";
+            setTimeout(() => splash.remove(), 700);
+          }, 1200); // Tiempo visible
+        }
+      });
+    </script>
+  <!-- Hero Section -->
+  <section class="grid lg:grid-cols-[1fr_2fr] min-h-screen" id="inicio">
+    <!-- Imagen Hero -->
+    <div
+      class="min-h-[40vh] lg:min-h-screen bg-cover bg-center"
+      style="background-image: url('/img/fperfil.jpg')"
+    >
+    </div>
+
+    <!-- Contenido Hero -->
+    <div
+      class="bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white flex flex-col justify-center items-center text-center px-8 py-16 lg:py-0"
+    >
+      <h2
+        id="typed-hero"
+        class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+      >
+        ¡Hola! Soy Aylin
+      </h2>
+      <p
+        class="text-lg md:text-xl lg:text-2xl mb-8 opacity-0 animate-fade-in max-w-2xl"
+      >
+        Estudiante de Ingeniería de Sistemas e Informática.
+      </p>
+      <a
+        href="/contacto"
+        class="px-8 py-3 border-2 border-red-600 text-red-600 rounded-full font-medium hover:bg-red-600 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        Contáctame
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección Sobre mí -->
+  <section class="py-16 lg:py-24 bg-gray-50" id="sobre-mi">
+    <div class="container mx-auto px-4 text-center">
+      <h2
+        class="text-3xl md:text-4xl lg:text-5xl font-bold inline-block relative pb-3 mb-12"
+      >
+        Lo que me apasiona
+        <span
+          class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-red-600 rounded-full"
+        ></span>
+      </h2>
+
+      <div class="max-w-4xl mx-auto">
+        <div
+          class="bg-white border-l-4 border-red-600 rounded-xl shadow-lg p-8 lg:p-10"
+        >
+          <p class="text-gray-700 text-base md:text-lg mb-4 leading-relaxed">
+            Soy <strong>Aylin Yap</strong>, estudiante de Ingeniería de Sistemas
+            e Informática en la Universidad Continental. Me interesa el
+            <span class="text-red-600 font-bold">desarrollo web</span>, las
+            <span class="text-red-600 font-bold">aplicaciones móviles</span> y los
+            <span class="text-red-600 font-bold">videojuegos</span>.
+          </p>
+          <p class="text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
+            Busco aplicar mis conocimientos en
+            <strong class="text-red-600">proyectos innovadores</strong> y seguir
+            creciendo en el área de tecnología.
+          </p>
+
+          <!-- Badges de habilidades -->
+          <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <span
+              class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium"
+              >HTML</span
+            >
+            <span
+              class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium"
+              >CSS</span
+            >
+            <span
+              class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium"
+              >JavaScript</span
+            >
+            <span
+              class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium"
+              >Bootstrap</span
+            >
+            <span
+              class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-medium"
+              >Desarrollo Web</span
+            >
+          </div>
+
+          <!-- Botón Ver Proyectos -->
+          <div class="mt-6">
+            <a
+              href="/proyectos"
+              class="inline-block bg-red-600 text-white px-8 py-3 rounded-full font-medium hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+            >
+              Ver Proyectos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
